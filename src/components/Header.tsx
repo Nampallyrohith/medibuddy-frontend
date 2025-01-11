@@ -69,7 +69,7 @@ const Header = () => {
                 4321
               </p>
             </div>
-            <div className="p-1 relative">
+            <div className="p-1 relative mr-3">
               <img src={cartImg} alt="cart" className="w-8" />
               <p className="text-xs absolute top-[-5px] right-[-10px] bg-blue-primary px-2 text-white rounded-full py-1">
                 1

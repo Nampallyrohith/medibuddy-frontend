@@ -2,6 +2,7 @@ import "./App.css";
 import ActiveBookings from "./components/ActiveBookings";
 import Banners from "./components/Banners";
 import ClinicLocation from "./components/ClinicLocation";
+import FAQ from "./components/FAQ";
 import Header from "./components/Header";
 import HealthChechkUp from "./components/HealthChechkUp";
 import LabTests from "./components/LabTests";
@@ -38,6 +39,8 @@ function App() {
         {/* @ts-ignore */}
 
         <LifestyleCheckup checkup={apiData} />
+        {/* @ts-ignore */}
+        <FAQ faqs={apiData} />
       </div>
     </div>
   );

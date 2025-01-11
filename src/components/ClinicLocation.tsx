@@ -14,7 +14,10 @@ const ClinicLocation = () => {
 
       <div className="overflow-x-auto flex gap-3">
         {clinicLocations.map((clinic) => (
-          <div className="rounded-xl border-2 min-w-[350px] flex flex-col gap-2 justify-between relative">
+          <div
+            key={clinic.id}
+            className="rounded-xl border-2 min-w-[350px] flex flex-col gap-2 justify-between relative"
+          >
             <img
               src={clinic.clinicImg}
               alt="clinic image"
@@ -85,6 +88,46 @@ const ClinicLocation = () => {
               className="w-8 md:w-12"
             />
             <p>1200+ Pincodes Covered</p>
+          </div>
+        </div>
+
+        <div className="hidden md:block">
+          <h1 className="text-text-navy-primary my-4 font-normal">
+            100% Safe & Secure Lab Tests
+          </h1>
+          <div className="grid grid-cols-2 text-base justify-between items-center gap-3 w-full my-3">
+            <div className="space-y-3 bg-white p-3 rounded-xl min-h-[110px] flex items-center gap-2">
+              <img
+                src="https://www.medibuddy.in/assets/icons/labs/test.svg"
+                alt="lab-image"
+                className="w-14"
+              />
+              <p className="w-2/5 ml-3">Govt. Approved Diagnostic Centres</p>
+            </div>
+            <div className="space-y-3 bg-white p-3 rounded-xl min-h-[110px] flex items-center gap-2">
+              <img
+                src="https://www.medibuddy.in/assets/icons/labs/trust/temperature.svg"
+                alt="lab-image"
+                className="w-14"
+              />
+              <p className="w-2/5 ml-3">Daily Temperature Check of all Technicians</p>
+            </div>
+            <div className="space-y-3 bg-white p-3 rounded-xl min-h-[110px] flex items-center gap-2">
+              <img
+                src="https://www.medibuddy.in/assets/icons/labs/trust/sanitize.svg"
+                alt="lab-image"
+                className="w-14"
+              />
+              <p className="w-2/5 ml-3">Mandatory use of Mask & Sanitizers</p>
+            </div>
+            <div className="space-y-3 bg-white p-3 rounded-xl min-h-[110px] flex items-center gap-2">
+              <img
+                src="https://www.medibuddy.in/assets/icons/labs/trust/spray.svg"
+                alt="lab-image"
+                className="w-14"
+              />
+              <p className="w-2/5 ml-3">Regular Disinfectation of Labs</p>
+            </div>
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ const PopularLabTests = () => {
 
       <div>
         {bookPopularLabTestList.map((popularLabTab) => (
-          <div className="relative border shadow-md rounded-2xl mt-3 p-2 md:p-4 cursor-pointer hover:transition hover:scale-105 hover:delay-200 hover:shadow-lg hover:ease-linear">
+          <div key={popularLabTab.id} className="relative border shadow-md rounded-2xl mt-3 p-2 md:p-4 cursor-pointer hover:transition hover:scale-105 hover:delay-200 hover:shadow-lg hover:ease-linear">
             {popularLabTab.cashless && (
               <>
                 <p className="bg-[#81A200] px-5 absolute top-0 right-0 rounded-tr-2xl rounded-bl-2xl text-white text-xs py-[2px]">

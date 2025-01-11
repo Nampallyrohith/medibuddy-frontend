@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import HealthChechkUp from "./components/HealthChechkUp";
 import LabTests from "./components/LabTests";
 import PopularLabTests from "./components/PopularLabTests";
+import Review from "./components/Review";
 import { useFetchData } from "./hooks/apiCall";
 import { PageConfigResponse } from "./model/typeDefinition";
 
@@ -30,6 +31,11 @@ function App() {
       <PopularLabTests />
 
       <ClinicLocation />
+      <div className="w-full px-3">
+        
+        {/* @ts-ignore */}
+        <Review reviews={apiData} />
+      </div>
     </div>
   );
 }

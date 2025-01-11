@@ -1,0 +1,107 @@
+import React from "react";
+
+interface faqProps {
+  faqs: {
+    id: string;
+    title: string;
+    props: {
+      id: number;
+      type: number;
+      question: string;
+      points: {
+        idx: number;
+        pnt: string;
+        img: string;
+      }[];
+    }[];
+  }[];
+  labDetails: {
+    id: string;
+    props: {
+      img: string;
+      title: string;
+      subTitle: string;
+      subText: string;
+    }[];
+  }[];
+}
+
+const FAQ: React.FC<faqProps> = ({ faqs, labDetails }) => {
+  const faqsData = faqs && faqs[6].props;
+  const labDetailsData = labDetails && labDetails[7].props;
+  const workingTheory = faqsData && faqsData[0];
+  console.log(workingTheory);
+  return (
+    <div className="px-3 w-full md:w-3/4 md:mx-auto mx-0">
+      {workingTheory && (
+        <>
+          <h1 className="text-xl md:text-center mt-10 text-text-navy-primary font-semibold">
+            {workingTheory.question}
+          </h1>
+          <div className="w-full md:flex md:justify-center md:items-center gap-4 md:text-center mb-3">
+            {workingTheory.points.map((point, index) => (
+              <div
+                key={point.idx}
+                className="flex md:flex-col justify-center gap-3 items-center md:w-1/3 space-y-3"
+              >
+                <img
+                  src={`https://www.medibuddy.in${point.img}`}
+                  alt="faq-ans"
+                  className="w-1/3 md:w-12 mr-2 md:mr-0 md:my-5"
+                />
+                <p
+                  className={`text-sm text-[#47566A] ${
+                    workingTheory.points.length - 1 === index &&
+                    " ml-[-7px] md:ml-0"
+                  }`}
+                >
+                  {point.pnt}
+                </p>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      <div className="block md:hidden">
+        <h1 className="text-text-navy-primary">100% Safe & Secure Lab Tests</h1>
+        <div className="grid grid-cols-2 text-[10px] justify-between items-center gap-3 w-full my-3">
+          <div className="space-y-3 bg-[#F1F7FF] p-3 rounded-xl min-h-[110px]">
+            <img
+              src="https://www.medibuddy.in/assets/icons/labs/test.svg"
+              alt="lab-image"
+              className="w-10"
+            />
+            <p>Govt. Approved Diagnostic Centres</p>
+          </div>
+          <div className="space-y-3 bg-[#F1F7FF] p-3 rounded-xl min-h-[110px]">
+            <img
+              src="https://www.medibuddy.in/assets/icons/labs/trust/temperature.svg"
+              alt="lab-image"
+              className="w-10"
+            />
+            <p>Daily Temperature Check of all Technicians</p>
+          </div>
+          <div className="space-y-3 bg-[#F1F7FF] p-3 rounded-xl min-h-[110px]">
+            <img
+              src="https://www.medibuddy.in/assets/icons/labs/trust/sanitize.svg"
+              alt="lab-image"
+              className="w-10"
+            />
+            <p>Mandatory use of Mask & Sanitizers</p>
+          </div>
+          <div className="space-y-3 bg-[#F1F7FF] p-3 rounded-xl min-h-[110px]">
+            <img
+              src="https://www.medibuddy.in/assets/icons/labs/trust/spray.svg"
+              alt="lab-image"
+              className="w-10"
+            />
+            <p>Regular Disinfectation of Labs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FAQ;

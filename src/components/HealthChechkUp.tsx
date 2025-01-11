@@ -101,7 +101,7 @@ const HealthChechkUp: React.FC<healthCheckupProps> = ({ health }) => {
                   Cholesterol - Total
                 </li>
                 <li className="text-[#4F4F4F] text-[10px]">
-                  Vitamin D... + {pkg.testCount - 2}more
+                  Vitamin D... + {pkg.testCount - 2} more
                 </li>
               </div>
               <div>

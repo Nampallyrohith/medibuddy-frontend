@@ -27,7 +27,7 @@ const ActiveBookings = () => {
   }, [api]);
 
   return (
-    <div className="mx-auto max-w-xs">
+    <div className="mx-auto max-w-xs md:max-w-xl lg:max-w-6xl">
       <div className="flex gap-2 items-center justify-between my-3">
         <h1 className="font-semibold text-text-navy-primary text-sm">
           Your Active Bookings
@@ -45,12 +45,15 @@ const ActiveBookings = () => {
           }),
         ]}
         setApi={setApi}
-        className="w-full max-w-xs"
+        className="w-full"
       >
-        <CarouselContent>
+        <CarouselContent className="w-full">
           {ActiveBookingsList.map((booking, index) => (
-            <CarouselItem key={index}>
-              <Card>
+            <CarouselItem
+              key={index}
+              className="md:basis-1/2 lg:basis-1/4 w-full"
+            >
+              <Card className="w-full">
                 <CardContent className="p-3">
                   <div className="flex justify-between items-center">
                     <div>
@@ -89,7 +92,7 @@ const ActiveBookings = () => {
           ))}
         </CarouselContent>
       </Carousel>
-      <div className="py-2 text-center text-sm gap-2 flex justify-center items-center text-muted-foreground">
+      <div className="py-2 text-center text-sm gap-2 flex justify-center items-center text-muted-foreground lg:hidden">
         {Array.from({ length: 5 }).map((_, index) => (
           <span
             key={index}

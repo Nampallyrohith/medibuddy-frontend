@@ -48,7 +48,7 @@ const Header = () => {
 
       {/* smaller device */}
       <nav className="block md:hidden">
-        <nav className="text-text-navy-primary flex justify-between items-center w-full gap-10 p-5">
+        <nav className="text-text-navy-primary flex justify-between items-center w-full gap-10 py-5">
           <div className="flex gap-3 items-center">
             <IoArrowBack size={30} />
             <div className="w-40">

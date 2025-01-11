@@ -11,7 +11,7 @@ function App() {
   console.log(data && data[0].page_config);
   const apiData = data && data[0].page_config
   return (
-    <div className="w-full h-full px-3">
+    <div className="w-full h-full px-3 md:px-0">
       <Header />
       {/* @ts-ignore */}
       <LabTests labs={apiData} />

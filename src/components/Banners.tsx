@@ -26,17 +26,17 @@ const Banners: React.FC<BannerProps> = ({ banners }) => {
   console.log(bannersCard);
 
   return (
-    <div className="my-5">
+    <div className="my-5 md:my-10 md:mx-44">
       <Carousel>
-        <CarouselContent>
+        <CarouselContent className="flex items-center">
           {bannersCard.map((banner: BannerCard, index: number) => (
-            <CarouselItem key={index}>
+            <CarouselItem key={index} className="lg:basis-1/3 ">
               <img src={banner.bannerUrl} alt={`Banner ${index + 1}`} />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="mt-2" />
+        <CarouselNext className="mt-2" />
       </Carousel>
     </div>
   );

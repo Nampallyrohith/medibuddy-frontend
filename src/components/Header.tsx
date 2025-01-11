@@ -48,10 +48,10 @@ const Header = () => {
 
       {/* smaller device */}
       <nav className="block md:hidden">
-        <nav className="text-text-navy-primary flex justify-between items-center w-full p-3">
+        <nav className="text-text-navy-primary flex justify-between items-center w-full gap-10 p-5">
           <div className="flex gap-3 items-center">
             <IoArrowBack size={30} />
-            <div className="w-36">
+            <div className="w-40">
               <h2 className="flex gap-2 items-center">
                 Telangana <MdOutlineLocationOn className="" />
               </h2>
@@ -62,10 +62,19 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="flex justify-center w-full items-center gap-2">
-            <img src={walletImg} alt="wallet" className="" />
-
-            <img src={cartImg} alt="cart" className="" />
+          <div className="flex justify-center  w-full items-center gap-4">
+            <div className="p-4 relative">
+              <img src={walletImg} alt="wallet" className="" />
+              <p className="text-xs absolute top-0 right-[-10px] bg-blue-primary px-2 text-white rounded-full py-1">
+                4321
+              </p>
+            </div>
+            <div className="p-1 relative">
+              <img src={cartImg} alt="cart" className="w-8" />
+              <p className="text-xs absolute top-[-5px] right-[-10px] bg-blue-primary px-2 text-white rounded-full py-1">
+                1
+              </p>
+            </div>
           </div>
         </nav>
         <div className="border border-gray-400 h-10 pl-3 rounded-xl shadow-sm mx-3 my-3 text-sm flex items-center justify-between">
@@ -76,7 +85,7 @@ const Header = () => {
           />
           <IoSearchOutline
             size={30}
-            className="text-gray-500 h-full pl-2 mr-4 border-l"
+            className="text-gray-500 h-full pl-2 mr-4"
           />
         </div>
       </nav>

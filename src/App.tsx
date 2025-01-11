@@ -1,4 +1,5 @@
 import "./App.css";
+import ActiveBookings from "./components/ActiveBookings";
 import Banners from "./components/Banners";
 import Header from "./components/Header";
 import HealthChechkUp from "./components/HealthChechkUp";
@@ -23,6 +24,7 @@ function App() {
         {/* @ts-ignore */}
         <HealthChechkUp health={apiData} />
       </div>
+      <ActiveBookings />
     </div>
   );
 }

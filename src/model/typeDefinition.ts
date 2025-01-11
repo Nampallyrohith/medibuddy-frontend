@@ -30,3 +30,15 @@ export interface BannerProps {
 export type PageConfigResponse = {
   page_config: PageConfig;
 };
+
+export interface ActiveBooking {
+  id: number;
+  avatar: string;
+  name: string;
+  status: string;
+  date: string;
+  day: string;
+  time: string;
+  service: string;
+  noOfTest: string;
+}

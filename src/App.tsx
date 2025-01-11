@@ -5,6 +5,7 @@ import ClinicLocation from "./components/ClinicLocation";
 import Header from "./components/Header";
 import HealthChechkUp from "./components/HealthChechkUp";
 import LabTests from "./components/LabTests";
+import LifestyleCheckup from "./components/LifestyleCheckup";
 import PopularLabTests from "./components/PopularLabTests";
 import Review from "./components/Review";
 import { useFetchData } from "./hooks/apiCall";
@@ -32,9 +33,11 @@ function App() {
 
       <ClinicLocation />
       <div className="w-full px-3">
-        
         {/* @ts-ignore */}
         <Review reviews={apiData} />
+        {/* @ts-ignore */}
+
+        <LifestyleCheckup checkup={apiData} />
       </div>
     </div>
   );

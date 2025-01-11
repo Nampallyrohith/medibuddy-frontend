@@ -79,19 +79,22 @@ body {
 }
 
 
-.carousel-track {
-  position: absolute;
-    left: 0;
-  animation: slide 20s linear infinite;
-    &:hover {
-        animation-play-state: paused;
-    }
+*::-webkit-scrollbar {
+  height: 1px;
 }
-@keyframes slide {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
+
+*::-webkit-scrollbar-track {
+  background: lightgray;
+  border-radius: 1px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  border: 2px solid #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f8f8f8;
+  border: none;
 }

@@ -1,5 +1,3 @@
-// import labTest1 from "@/assets/lab-test-1.png";
-
 import { LabProps } from "@/model/typeDefinition";
 
 interface labsProps {

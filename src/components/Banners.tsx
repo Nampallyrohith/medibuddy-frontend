@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
+import Autoplay from "embla-carousel-autoplay";
 interface BannerCard {
   bannerUrl: string;
 }
@@ -22,12 +22,21 @@ interface BannerProps {
 }
 
 const Banners: React.FC<BannerProps> = ({ banners }) => {
-  const bannersCard = (banners && banners[1].props) || []; // Access the `props` array from `banners`
-  console.log(bannersCard);
+  const bannersCard = (banners && banners[1].props) || [];
 
   return (
-    <div className="my-5 md:my-10 md:mx-44">
-      <Carousel>
+    <div className="px-3 md:px-0 my-5 md:my-10 md:mx-44">
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
+      >
         <CarouselContent className="flex items-center">
           {bannersCard.map((banner: BannerCard, index: number) => (
             <CarouselItem key={index} className="lg:basis-1/3 ">
@@ -35,8 +44,8 @@ const Banners: React.FC<BannerProps> = ({ banners }) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="mt-2" />
-        <CarouselNext className="mt-2" />
+        <CarouselPrevious className="mt-2 hidden md:block" />
+        <CarouselNext className="mt-2 hidden md:block" />
       </Carousel>
     </div>
   );

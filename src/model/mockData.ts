@@ -1,5 +1,10 @@
 import avatar from "@/assets/avatar.png";
-import { ActiveBooking, bookPopularLabTestType } from "./typeDefinition";
+import {
+  ActiveBooking,
+  bookPopularLabTestType,
+  clinicLocationDetailsType,
+} from "./typeDefinition";
+import clinicLoc1 from "@/assets/lab-location-2.jpg";
 
 export const ActiveBookingsList: ActiveBooking[] = [
   {
@@ -109,5 +114,22 @@ export const bookPopularLabTestList: bookPopularLabTestType[] = [
     reports: "Reports in 10-12 hrs",
     isHome: true,
     isLab: false,
+  },
+];
+
+export const clinicLocations: clinicLocationDetailsType[] = [
+  {
+    id: 1,
+    clinicImg: clinicLoc1,
+    clinicName: "Apollo Diagnostics",
+    location: "Kormanganala, Bangalore",
+    nextSlot: "Next slot - 7:30AM, Tomorrow",
+  },
+  {
+    id: 2,
+    clinicImg: clinicLoc1,
+    clinicName: "Apollo Medical Center",
+    location: "HSR Layout, Bangalore",
+    nextSlot: "Next slot - 10:30AM, After two days",
   },
 ];

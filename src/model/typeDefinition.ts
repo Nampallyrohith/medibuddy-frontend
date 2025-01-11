@@ -54,3 +54,11 @@ export interface bookPopularLabTestType {
   isHome: boolean;
   isLab: boolean;
 }
+
+export interface clinicLocationDetailsType {
+  id: number;
+  clinicImg: string;
+  clinicName: string;
+  location: string;
+  nextSlot: string;
+}

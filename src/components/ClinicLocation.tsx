@@ -42,6 +42,52 @@ const ClinicLocation = () => {
           </div>
         ))}
       </div>
+
+      <div className="bg-white md:bg-[#E8F2FE] md:p-6 md:mt-5 md:rounded-lg">
+        <div className="flex justify-between items-center w-full my-3">
+          <div>
+            <p>
+              Trusted by{" "}
+              <span className="text-blue-primary font-semibold">
+                20,00,000+
+              </span>
+            </p>
+            <p className="font-semibold ">User Every month</p>
+          </div>
+          <img
+            src="https://www.medibuddy.in/assets/icons/trust.svg"
+            alt="trust-logo"
+            className="w-8"
+          />
+        </div>
+
+        <div className="flex flex-wrap gap-5 mt-5">
+          <div className="flex gap-2 items-center w-2/5 md:w-1/4 md:mx-auto text-xs md:text-sm">
+            <img
+              src="https://www.medibuddy.in/assets/icons/labs/trust/telescope.svg"
+              alt=""
+              className="w-8 md:w-12"
+            />
+            <p>200+ Approved Diagnostic Centers</p>
+          </div>
+          <div className="flex gap-2 items-center w-2/5 md:w-1/4 md:mx-auto text-xs md:text-sm">
+            <img
+              src="https://www.medibuddy.in/assets/icons/labs/trust/tubes.svg"
+              alt=""
+              className="w-8 md:w-12"
+            />
+            <p>1200+ Lab Tests Offered</p>
+          </div>
+          <div className="flex gap-2 items-center w-2/5 md:w-1/4 md:mx-auto text-xs md:text-sm">
+            <img
+              src="https://www.medibuddy.in/assets/icons/labs/trust/locations.svg"
+              alt=""
+              className="w-8 md:w-12"
+            />
+            <p>1200+ Pincodes Covered</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

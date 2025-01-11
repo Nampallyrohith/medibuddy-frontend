@@ -1,5 +1,4 @@
 import { bookPopularLabTabs, bookPopularLabTestList } from "@/model/mockData";
-import React from "react";
 import { Button } from "./ui/button";
 import { BiSolidTimer } from "react-icons/bi";
 import { HiMiniHome } from "react-icons/hi2";
@@ -27,9 +26,9 @@ const PopularLabTests = () => {
         ))}
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div>
         {bookPopularLabTestList.map((popularLabTab) => (
-          <div className="relative border shadow-md rounded-2xl mt-3 p-2">
+          <div className="relative border shadow-md rounded-2xl mt-3 p-2 md:p-4 cursor-pointer hover:transition hover:scale-105 hover:delay-200 hover:shadow-lg hover:ease-linear">
             {popularLabTab.cashless && (
               <>
                 <p className="bg-[#81A200] px-5 absolute top-0 right-0 rounded-tr-2xl rounded-bl-2xl text-white text-xs py-[2px]">

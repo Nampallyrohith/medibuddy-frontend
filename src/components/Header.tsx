@@ -48,7 +48,7 @@ const Header = () => {
 
       {/* smaller device */}
       <nav className="block md:hidden">
-        <nav className="text-text-navy-primary flex justify-between items-center w-full gap-10 p-5">
+        <nav className="text-text-navy-primary flex justify-between items-center w-full gap-10 py-5">
           <div className="flex gap-3 items-center">
             <IoArrowBack size={30} />
             <div className="w-40">
@@ -77,7 +77,7 @@ const Header = () => {
             </div>
           </div>
         </nav>
-        <div className="border border-gray-400 h-10 pl-3 rounded-xl shadow-sm mx-3 my-3 text-sm flex items-center justify-between">
+        <div className="border border-gray-400 h-10 pl-3 rounded-xl shadow-md mx-3 my-3 text-sm flex items-center justify-between">
           <input
             type="search"
             placeholder="Find lab tests, diagnostics center"

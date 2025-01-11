@@ -77,3 +77,21 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+.carousel-track {
+  position: absolute;
+    left: 0;
+  animation: slide 20s linear infinite;
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}

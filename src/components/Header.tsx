@@ -77,7 +77,7 @@ const Header = () => {
             </div>
           </div>
         </nav>
-        <div className="border border-gray-400 h-10 pl-3 rounded-xl shadow-sm mx-3 my-3 text-sm flex items-center justify-between">
+        <div className="border border-gray-400 h-10 pl-3 rounded-xl shadow-md mx-3 my-3 text-sm flex items-center justify-between">
           <input
             type="search"
             placeholder="Find lab tests, diagnostics center"

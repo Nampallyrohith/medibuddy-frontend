@@ -42,3 +42,15 @@ export interface ActiveBooking {
   service: string;
   noOfTest: string;
 }
+
+export interface bookPopularLabTestType {
+  id: number;
+  name: string;
+  cashless: boolean;
+  discount: string;
+  finalPrice: number;
+  price: number;
+  reports: string;
+  isHome: boolean;
+  isLab: boolean;
+}

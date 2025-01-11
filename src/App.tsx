@@ -4,6 +4,7 @@ import Banners from "./components/Banners";
 import Header from "./components/Header";
 import HealthChechkUp from "./components/HealthChechkUp";
 import LabTests from "./components/LabTests";
+import PopularLabTests from "./components/PopularLabTests";
 import { useFetchData } from "./hooks/apiCall";
 import { PageConfigResponse } from "./model/typeDefinition";
 
@@ -25,6 +26,7 @@ function App() {
         <HealthChechkUp health={apiData} />
       </div>
       <ActiveBookings />
+      <PopularLabTests />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import avatar from "@/assets/avatar.png";
-import { ActiveBooking } from "./typeDefinition";
+import { ActiveBooking, bookPopularLabTestType } from "./typeDefinition";
 
 export const ActiveBookingsList: ActiveBooking[] = [
   {
@@ -45,5 +45,69 @@ export const ActiveBookingsList: ActiveBooking[] = [
     time: "09:30 - 10:30AM",
     service: "Home Sample Collection",
     noOfTest: "03 Lab Tests",
+  },
+];
+
+export const bookPopularLabTabs = [
+  "For Amazon Employees",
+  "Center Visit",
+  "Full Body Check",
+];
+
+export const bookPopularLabTestList: bookPopularLabTestType[] = [
+  {
+    id: 1,
+    name: "Complete Blood Count (CBC) - EDTA Whole Blood",
+    cashless: true,
+    discount: "55%",
+    finalPrice: 500,
+    price: 800,
+    reports: "Reports in 10-12 hrs",
+    isHome: true,
+    isLab: true,
+  },
+  {
+    id: 2,
+    name: "Complete Blood Count (CBC) - EDTA Whole Blood",
+    cashless: true,
+    discount: "55%",
+    finalPrice: 500,
+    price: 800,
+    reports: "Reports in 10-12 hrs",
+    isHome: true,
+    isLab: false,
+  },
+  {
+    id: 3,
+    name: "Complete Blood Count (CBC) - EDTA Whole Blood",
+    cashless: true,
+    discount: "55%",
+    finalPrice: 500,
+    price: 800,
+    reports: "Reports in 10-12 hrs",
+    isHome: true,
+    isLab: true,
+  },
+  {
+    id: 4,
+    name: "Complete Blood Count (CBC) - EDTA Whole Blood",
+    cashless: true,
+    discount: "55%",
+    finalPrice: 500,
+    price: 800,
+    reports: "Reports in 10-12 hrs",
+    isHome: false,
+    isLab: true,
+  },
+  {
+    id: 5,
+    name: "Complete Blood Count (CBC) - EDTA Whole Blood",
+    cashless: true,
+    discount: "55%",
+    finalPrice: 500,
+    price: 800,
+    reports: "Reports in 10-12 hrs",
+    isHome: true,
+    isLab: false,
   },
 ];

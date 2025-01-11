@@ -78,9 +78,9 @@ const HealthChechkUp: React.FC<healthCheckupProps> = ({ health }) => {
         {filteredPackages?.map((pkg, index) => (
           <div
             key={index}
-            className="p-4 border min-w-[350px] flex flex-col  relative rounded-2xl shadow-sm bg-white"
+            className="px-4 pt-4 border min-w-[350px] min-h-[350px] flex flex-col  relative rounded-2xl shadow-sm bg-white"
           >
-            {pkg.isSponsored && (
+            {!pkg.isSponsored && (
               <p className="bg-[#F40009] px-5 absolute top-0 right-0 rounded-tr-2xl rounded-bl-2xl text-white text-xs py-[3px]">
                 Sponsored
               </p>
@@ -145,7 +145,7 @@ const HealthChechkUp: React.FC<healthCheckupProps> = ({ health }) => {
 
             <div className="pt-5 flex justify-between items-center">
               <p className="text-text-navy-primary text-sm font-semibold">
-                {pkg.price}
+                {pkg.price}/-
               </p>
 
               {pkg.cartId || cartCount !== 0 ? (

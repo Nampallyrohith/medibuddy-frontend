@@ -45,7 +45,7 @@ const HealthChechkUp: React.FC<healthCheckupProps> = ({ health }) => {
         })
       : [];
   return (
-    <div className="w-full px-0 md:px-44">
+    <div className="w-full px-0 md:w-4/5 mx-auto">
       <div className="flex gap-2 items-center justify-between my-3">
         <h1 className="font-semibold text-text-navy-primary text-sm">
           {health && health[2].heading}

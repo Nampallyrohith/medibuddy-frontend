@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface faqProps {
   faqs: {
@@ -15,21 +21,11 @@ interface faqProps {
       }[];
     }[];
   }[];
-  labDetails: {
-    id: string;
-    props: {
-      img: string;
-      title: string;
-      subTitle: string;
-      subText: string;
-    }[];
-  }[];
 }
 
-const FAQ: React.FC<faqProps> = ({ faqs, labDetails }) => {
-  const faqsData = faqs && faqs[6].props;
-  const labDetailsData = labDetails && labDetails[7].props;
-  const workingTheory = faqsData && faqsData[0];
+const FAQ: React.FC<faqProps> = ({ faqs }) => {
+  const faqsData = faqs && faqs[6];
+  const workingTheory = faqsData && faqsData.props[0];
   console.log(workingTheory);
   return (
     <div className="px-3 w-full md:w-3/4 md:mx-auto mx-0">
@@ -99,6 +95,34 @@ const FAQ: React.FC<faqProps> = ({ faqs, labDetails }) => {
             <p>Regular Disinfectation of Labs</p>
           </div>
         </div>
+      </div>
+
+      <div className="my-10">
+        {faqsData && (
+          <>
+            <h1 className="text-xl md:text-center mt-5 text-text-navy-primary font-semibold">
+              {faqsData.title}
+            </h1>
+
+            <Accordion type="single" collapsible className="w-full">
+              {faqsData.props.slice(1).map((faq, index) => (
+                <AccordionItem value={"item-" + index} key={index}>
+                  <AccordionTrigger className="text-[#2E3742] text-sm md:text-base">
+                    {faq.question}
+                  </AccordionTrigger>
+                  {faq.points.map((point) => (
+                    <AccordionContent
+                      key={point.idx}
+                      className="text-[#4D5C6F] text-xs md:text-sm leading-none"
+                    >
+                      {point.pnt}
+                    </AccordionContent>
+                  ))}
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </>
+        )}
       </div>
     </div>
   );

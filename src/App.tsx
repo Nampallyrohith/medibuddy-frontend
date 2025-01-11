@@ -40,7 +40,7 @@ function App() {
 
         <LifestyleCheckup checkup={apiData} />
         {/* @ts-ignore */}
-        <FAQ faqs={apiData} labDetails={apiData} />
+        <FAQ faqs={apiData} />
       </div>
     </div>
   );

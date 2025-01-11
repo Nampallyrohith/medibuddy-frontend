@@ -1,6 +1,10 @@
 export interface PageConfig {
   id: string;
-  title: string;
+  title?: string;
+  heading?: string;
+  categories?: {
+    "10386": string[];
+  };
   props: [];
 }
 
@@ -24,5 +28,5 @@ export interface BannerProps {
 }
 
 export type PageConfigResponse = {
-  page_config: LabProps | BannerProps;
+  page_config: PageConfig;
 };

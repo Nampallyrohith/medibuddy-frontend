@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Medibuddy Labs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project was built using modern tools and best practices to create a responsive and functional application. Below are the key highlights and instructions to get started.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **Framework:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **UI Components:** [ShadCN](https://shadcn.dev/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Links
 
-- Configure the top-level `parserOptions` property like this:
+- **Smaller Screen Version:** [Link](https://drive.google.com/file/d/1dVBcYHNwYWO-pdozxehXP0WK2FMfzenI/view?usp=sharing)
+- **Larger Screen Version:** [Link](https://drive.google.com/file/d/1XEuuyFW6vXEKJu8KvCWKJPjGfjfGT8Pv/view?usp=sharing)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Follow these steps to run the project locally:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Install dependencies:
+   ```bash
+    npm install
+    npm run dev
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Features
+
+1. Custom API Hook
+   A custom React hook was implemented to fetch data from an API efficiently.
+   This approach simplifies data fetching and improves code reusability.
+2. Component Organization
+   Used ShadCN for modular and reusable UI components.
+   Rendered dynamic components such as filters and categories for enhanced interactivity.
+3. File and Folder Structure
+   The project maintains a well-organized directory structure:
+
+   ### Types:
+
+   For defining and maintaining TypeScript types.
+
+   ### Components:
+
+   ShadCN-based reusable components.
+
+   ### Hooks:
+
+   Custom hooks, including the API hook.
+
+   ### Services:
+
+   API service logic for external communication.
+
+   ### Assets:
+
+   Static files like images.
+
+   ### CSS:
+
+   Custom Tailwind CSS configurations, including colors and themes.
+
+   ### Mockdata:
+
+   For testing and development without dependency on external APIs.
+
+4. Responsive Design
+   Fully responsive design optimized for both smaller and larger screens.
+   Ensured seamless user experience across a variety of devices.
+
+## Development Practices
+
+### Version Control:
+
+Maintained a structured Git workflow, with multiple branches for feature development.
+
+### Pull Requests:
+
+Created and reviewed pull requests to ensure code quality and consistency.

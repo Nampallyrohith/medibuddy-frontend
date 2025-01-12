@@ -53,7 +53,7 @@ const Header = () => {
             <IoArrowBack size={30} />
             <div className="w-40">
               <h2 className="flex gap-2 items-center">
-                Kormangala <MdOutlineLocationOn className="" />
+                Koramangala <MdOutlineLocationOn className="" />
               </h2>
               <p className="truncate text-xs">
                 Sarvabhoumanagar Billekahalli, BG Road, Bangalore, Karnataka -

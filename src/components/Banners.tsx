@@ -17,12 +17,11 @@ interface BannerProps {
         id: string;
         title: string;
         props: BannerCard[];
-      }[]
+      }
     | null;
 }
 
 const Banners: React.FC<BannerProps> = ({ banners }) => {
-  const bannersCard = (banners && banners[1].props) || [];
 
   return (
     <div className="px-3 md:px-0 my-5 md:my-10 md:w-4/5 mx-auto">
@@ -38,7 +37,7 @@ const Banners: React.FC<BannerProps> = ({ banners }) => {
         ]}
       >
         <CarouselContent className="flex items-center">
-          {bannersCard.map((banner: BannerCard, index: number) => (
+          {banners?.props.map((banner: BannerCard, index: number) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 ">
               <img src={banner.bannerUrl} alt={`Banner ${index + 1}`} />
             </CarouselItem>

@@ -23,11 +23,10 @@ interface reviewProps {
     id: string;
     title: string;
     props: reviewsData[];
-  }[];
+  };
 }
 
 const Review: React.FC<reviewProps> = ({ reviews }) => {
-  const reviewsData = reviews && reviews[5].props;
 
   const momentFunc = (date: string) => {
     const inputDate = moment(date, "DD MMMM YYYY");
@@ -45,8 +44,8 @@ const Review: React.FC<reviewProps> = ({ reviews }) => {
         ]}
       >
         <CarouselContent className="flex items-center">
-          {reviewsData &&
-            reviewsData.map((review: reviewsData, index: number) => (
+          {reviews.props &&
+            reviews.props.map((review: reviewsData, index: number) => (
               <CarouselItem
                 key={index}
                 className="md:basis-1/2 lg:basis-1/3 text-[#969696] md:border md:mx-3 md:p-2 md:rounded-md md:shadow-md md: "

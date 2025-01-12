@@ -21,13 +21,11 @@ interface faqProps {
         img: string;
       }[];
     }[];
-  }[];
+  }
 }
 
 const FAQ: React.FC<faqProps> = ({ faqs }) => {
-  const faqsData = faqs && faqs[6];
-  const workingTheory = faqsData && faqsData.props[0];
-  console.log(workingTheory);
+  const workingTheory = faqs && faqs.props[0];
   return (
     <div className="px-3 w-full md:w-3/4 md:mx-auto mx-0">
       {workingTheory && (
@@ -99,15 +97,15 @@ const FAQ: React.FC<faqProps> = ({ faqs }) => {
       </div>
 
       <div className="my-10">
-        {faqsData && (
+        {faqs && (
           <>
             <h1 className="text-xl md:text-center mt-5 text-text-navy-primary font-semibold">
-              {faqsData.title}
+              {faqs.title}
             </h1>
 
             <Accordion type="single" collapsible className="w-full">
-              {faqsData.props.slice(1).map((faq, index) => (
-                <AccordionItem value={"item-" + index} key={index}>
+              {faqs.props.slice(1).map((faq, index) => (
+                <AccordionItem key={index} value={"item-" + index} >
                   <AccordionTrigger className="text-[#2E3742] md:text-blue-primary md:font-normal text-sm md:text-base md:shadow-md md:rounded-[17px] md:mb-3 md:h-16 gap-2 md:flex md:justify-between md:items-center md:gap-3">
                     <span className="md:flex md:items-center gap-2">
                       <img

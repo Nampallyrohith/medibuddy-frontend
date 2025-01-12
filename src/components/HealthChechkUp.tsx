@@ -5,36 +5,33 @@ import radiologImg from "@/assets/radiology.png";
 import { HiMiniHome } from "react-icons/hi2";
 
 interface healthCheckupProps {
-  health:
-    | {
-        id: string;
-        heading: string;
-        categories: {
-          [key: string]: string[]; // Dynamic keys for categories
-        };
-        props: {
-          packages: {
-            packageDisplayName: string;
-            testCount: number;
-            fastingHoursText: string;
-            isRadiologyIncluded: boolean;
-            isHomeSampleAvailable: boolean;
-            price: number;
-            isAvailable: boolean;
-            isSponsored: boolean;
-            reportsTatText: string;
-            subCategories: string[];
-            cartId: number;
-          }[];
-        }[];
-      }[]
-    | null;
+  health: {
+    id: string;
+    heading: string;
+    categories: {
+      [key: string]: string[]; // Dynamic keys for categories
+    };
+    props: {
+      packages: {
+        packageDisplayName: string;
+        testCount: number;
+        fastingHoursText: string;
+        isRadiologyIncluded: boolean;
+        isHomeSampleAvailable: boolean;
+        price: number;
+        isAvailable: boolean;
+        isSponsored: boolean;
+        reportsTatText: string;
+        subCategories: string[];
+        cartId: number;
+      }[];
+    }[];
+  } | null;
 }
 
 const HealthChechkUp: React.FC<healthCheckupProps> = ({ health }) => {
-  const healthItem = health && health[2];
-  const categories = healthItem && healthItem.categories;
-  const healthData = healthItem && healthItem.props[0].packages;
+  const categories = health?.categories;
+  const healthData = health?.props[0].packages;
 
   const [selectedCategory, setSelectedCategory] = useState<string>("Popular");
   const [cartCount, setCartCount] = useState<number>(0);
@@ -48,7 +45,7 @@ const HealthChechkUp: React.FC<healthCheckupProps> = ({ health }) => {
     <div className="w-full px-0 md:w-4/5 mx-auto">
       <div className="flex gap-2 items-center justify-between my-3">
         <h1 className="font-semibold text-text-navy-primary text-sm">
-          {health && health[2].heading}
+          {health?.heading}
         </h1>
         <p className="text-blue-primary font-semibold text-sm">View All</p>
       </div>
@@ -149,7 +146,7 @@ const HealthChechkUp: React.FC<healthCheckupProps> = ({ health }) => {
               </p>
 
               {pkg.cartId || cartCount !== 0 ? (
-                <div className="border border-blue-primary flex items-center gap-2 text-blue-primary rounded-xl text-blue-primary">
+                <div className="border border-blue-primary flex items-center gap-2 text-blue-primary rounded-xl">
                   <Button
                     className=" border-none rounded-xl shadow-none text-blue-primary hover:bg-white bg-white"
                     type="button"

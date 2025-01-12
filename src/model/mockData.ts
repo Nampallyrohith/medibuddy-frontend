@@ -70,6 +70,7 @@ export const bookPopularLabTestList: bookPopularLabTestType[] = [
     reports: "Reports in 10-12 hrs",
     isHome: true,
     isLab: true,
+    subCategories: ["FOR AMAZON EMPLOYEES", "FULL BODY CHECK"],
   },
   {
     id: 2,
@@ -81,6 +82,7 @@ export const bookPopularLabTestList: bookPopularLabTestType[] = [
     reports: "Reports in 10-12 hrs",
     isHome: true,
     isLab: false,
+    subCategories: ["FOR AMAZON EMPLOYEES",  ],
   },
   {
     id: 3,
@@ -92,6 +94,7 @@ export const bookPopularLabTestList: bookPopularLabTestType[] = [
     reports: "Reports in 10-12 hrs",
     isHome: true,
     isLab: true,
+    subCategories: [ "CENTER VISIT", "FULL BODY CHECK"],
   },
   {
     id: 4,
@@ -103,6 +106,7 @@ export const bookPopularLabTestList: bookPopularLabTestType[] = [
     reports: "Reports in 10-12 hrs",
     isHome: false,
     isLab: true,
+    subCategories: ["FOR AMAZON EMPLOYEES","FULL BODY CHECK"],
   },
   {
     id: 5,
@@ -114,6 +118,7 @@ export const bookPopularLabTestList: bookPopularLabTestType[] = [
     reports: "Reports in 10-12 hrs",
     isHome: true,
     isLab: false,
+    subCategories: ["FOR AMAZON EMPLOYEES", "CENTER VISIT", "FULL BODY CHECK"],
   },
 ];
 

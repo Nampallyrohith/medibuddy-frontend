@@ -3,7 +3,7 @@ export interface PageConfig {
   title?: string;
   heading?: string;
   categories?: {
-    "10386": string[];
+    [key: string]: string[];
   };
   props: [];
 }
@@ -53,6 +53,7 @@ export interface bookPopularLabTestType {
   reports: string;
   isHome: boolean;
   isLab: boolean;
+  subCategories: string[];
 }
 
 export interface clinicLocationDetailsType {

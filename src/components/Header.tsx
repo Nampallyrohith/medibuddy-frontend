@@ -53,7 +53,7 @@ const Header = () => {
             <IoArrowBack size={30} />
             <div className="w-40">
               <h2 className="flex gap-2 items-center">
-                Telangana <MdOutlineLocationOn className="" />
+                Kormangala <MdOutlineLocationOn className="" />
               </h2>
               <p className="truncate text-xs">
                 Sarvabhoumanagar Billekahalli, BG Road, Bangalore, Karnataka -
@@ -65,13 +65,13 @@ const Header = () => {
           <div className="flex justify-center  w-full items-center gap-4">
             <div className="p-4 relative">
               <img src={walletImg} alt="wallet" className="" />
-              <p className="text-xs absolute top-0 right-[-10px] bg-blue-primary px-2 text-white rounded-full py-1">
+              <p className="text-[10px] absolute top-0 right-[-10px] bg-blue-primary px-2 text-white rounded-full py-1">
                 4321
               </p>
             </div>
             <div className="p-1 relative mr-3">
               <img src={cartImg} alt="cart" className="w-8" />
-              <p className="text-xs absolute top-[-5px] right-[-10px] bg-blue-primary px-2 text-white rounded-full py-1">
+              <p className="text-[10px] absolute top-[-5px] right-[-10px] bg-blue-primary px-2 text-white rounded-full py-1">
                 1
               </p>
             </div>

@@ -10,7 +10,7 @@ const PopularLabTests = () => {
         <h1 className="font-semibold text-text-navy-primary text-sm">
           Book Popular Lab Tests
         </h1>
-        <p className="text-blue-primary font-semibold text-sm">View All</p>
+        <p className="text-blue-primary font-semibold text-sm">View More</p>
       </div>
 
       <div className="w-full flex overflow-x-auto items-center gap-3">

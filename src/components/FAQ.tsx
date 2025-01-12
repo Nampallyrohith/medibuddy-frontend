@@ -14,6 +14,7 @@ interface faqProps {
       id: number;
       type: number;
       question: string;
+      icon: string;
       points: {
         idx: number;
         pnt: string;
@@ -107,15 +108,21 @@ const FAQ: React.FC<faqProps> = ({ faqs }) => {
             <Accordion type="single" collapsible className="w-full">
               {faqsData.props.slice(1).map((faq, index) => (
                 <AccordionItem value={"item-" + index} key={index}>
-                  <AccordionTrigger className="text-[#2E3742] text-sm md:text-base">
-                    {faq.question}
+                  <AccordionTrigger className="text-[#2E3742] md:text-blue-primary md:font-normal text-sm md:text-base md:shadow-md md:rounded-[17px] md:mb-3 md:h-16 gap-2 md:flex md:justify-between md:items-center md:gap-3">
+                    <span className="md:flex md:items-center gap-2">
+                      <img
+                        src={`https://www.medibuddy.in/${faq.icon}`}
+                        className="w-14 h-16 hidden md:block"
+                      />
+                      {faq.question}
+                    </span>
                   </AccordionTrigger>
                   {faq.points.map((point) => (
                     <AccordionContent
                       key={point.idx}
-                      className="text-[#4D5C6F] text-xs md:text-sm leading-none"
+                      className="text-[#4D5C6F] text-xs md:text-sm leading-none "
                     >
-                      {point.pnt}
+                      <li className="md:ml-20">{point.pnt}</li>
                     </AccordionContent>
                   ))}
                 </AccordionItem>
